@@ -24,6 +24,14 @@ ROS Control:
 
 We welcome any contributions to this repo and encourage you to fork the project then send pull requests back to this parent repo. Thanks for your help!
 
+## <span id="citelink">Citation</span>
+If you find this repository useful in your research, please consider citing the following papers:
+
+```
+Zheng, Jiaxi, Peng Xu, Zhaochen Meng, Jianhua Liu, Siyuan Wang, Xinyu Wang, Guangming Xie, Jin Tao, and Minyi Xu. "Design, Fabrication, and Characterization of a Hybrid Bionic Spherical Robotics With Multilegged Feedback Mechanism." IEEE Robotics and Automation Letters 7, no. 4 (2022): 8659-8666.
+}
+```
+
 sudo apt install ros-noetic-navigation
 sudo apt-get install ros-noetic-joint-trajectory-controller
 sudo apt install ros-noetic-velocity-controllers
