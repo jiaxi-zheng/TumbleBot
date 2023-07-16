@@ -1,0 +1,5 @@
+<launch>
+
+    <node pkg="urchin_control" type="Fixed_motion" name="Fixed_motion"  output="screen"/>
+
+  </launch>

@@ -1,0 +1,60 @@
+<launch>
+
+  <!-- these are the arguments you can pass this launch file, for example paused:=true -->
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="true"/>
+  <arg name="headless" default="false"/>
+  <arg name="debug" default="false"/>
+
+  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find urchin_gazebo)/worlds/urchin.world"/>
+    <arg name="debug" value="$(arg debug)" />
+    <arg name="gui" value="$(arg gui)" />
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="headless" value="$(arg headless)"/>
+  </include>
+
+  <!-- Load the URDF into the ROS Parameter Server -->
+ <arg
+    name="urchin_bot" />
+  <param
+    name="robot_description" textfile="$(find urchin_description)/urdf/urchin_bot.xml" />
+ 
+ <param
+    name="use_gui" value="true"/>
+ 
+ <node
+    name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
+  
+  <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+    args="-urdf -model rrbot -param robot_description"/>
+
+ <node
+    name="rviz" pkg="rviz" type="rviz" args="-d $(find urchin_description)/urdf.rviz" />
+
+    <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find urchin_control)/config/urchin_control.yaml" command="load"/>
+
+  <!-- load the controllers -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+	output="screen" ns="/urchin_bot" args="joint_state_controller
+					  joint_111 joint_11 joint_1 joint_ft1 joint_222 joint_22 joint_2 joint_ft2 joint_333 joint_33 joint_3
+             joint_ft3 joint_444 joint_44 joint_4 joint_ft4 joint_555 joint_55 joint_5 joint_ft5 joint_666 joint_66
+              joint_6 joint_ft6 joint_777 joint_77 joint_7 joint_ft7 joint_888 joint_88 joint_8 joint_ft8 joint_999
+               joint_99 joint_9 joint_ft9 joint_101010 joint_1010 joint_10 joint_ft10 joint_111111 joint_1111
+                joint__11 joint_ft11 joint_121212 joint_1212 joint_12 joint_ft12 joint_131313 joint_1313 joint_13
+                 joint_ft13 joint_141414 joint_1414 joint_14 joint_ft14"/>
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+	respawn="false" output="screen">
+    <remap from="/joint_states" to="/urchin_bot/joint_states" />
+  </node>
+
+    <node pkg="urchin_control" type="tele_pub" name="tele_pub" />
+
+</launch>

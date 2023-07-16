@@ -1,0 +1,5 @@
+rostopic pub -r 100 /urchin_bot/joint_55/command std_msgs/Float64 "data: -1.0"
+
+rostopic pub -r 100 /urchin_bot/joint_33/command std_msgs/Float64 "data: -1.0"
+
+rostopic pub -r 100 /urchin_bot/joint_ft1/command std_msgs/Float64 "data: -1.0"

@@ -1,0 +1,357 @@
+urchin_bot:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 1000  
+  
+
+############################---1---############################
+  # Position Controllers ---------------------------------------
+  joint_111:
+    type: velocity_controllers/JointVelocityController
+    joint: 111_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  # Position Controllers ---------------------------------------
+  joint_11:
+    type: velocity_controllers/JointVelocityController
+    joint: 11_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint_1:
+    type: velocity_controllers/JointVelocityController
+    joint: 1_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint_ft1:
+    type: velocity_controllers/JointVelocityController
+    joint: ft1_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+
+############################---2---############################
+  # Position Controllers ---------------------------------------
+  joint_222:
+    type: velocity_controllers/JointVelocityController
+    joint: 222_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  # Position Controllers ---------------------------------------
+  joint_22:
+    type: velocity_controllers/JointVelocityController
+    joint: 22_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint_2:
+    type: velocity_controllers/JointVelocityController
+    joint: 2_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint_ft2:
+    type: velocity_controllers/JointVelocityController
+    joint: ft2_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+############################---3---############################
+  # Position Controllers ---------------------------------------
+  joint_333:
+    type: velocity_controllers/JointVelocityController
+    joint: 333_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  # Position Controllers ---------------------------------------
+  joint_33:
+    type: velocity_controllers/JointVelocityController
+    joint: 33_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint_3:
+    type: velocity_controllers/JointVelocityController
+    joint: 3_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint_ft3:
+    type: velocity_controllers/JointVelocityController
+    joint: ft3_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+############################---4---############################
+  # Position Controllers ---------------------------------------
+  joint_444:
+    type: velocity_controllers/JointVelocityController
+    joint: 444_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  # Position Controllers ---------------------------------------
+  joint_44:
+    type: velocity_controllers/JointVelocityController
+    joint: 44_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint_4:
+    type: velocity_controllers/JointVelocityController
+    joint: 4_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint_ft4:
+    type: velocity_controllers/JointVelocityController
+    joint: ft4_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+############################---5---############################
+  # Position Controllers ---------------------------------------
+  joint_555:
+    type: velocity_controllers/JointVelocityController
+    joint: 555_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  # Position Controllers ---------------------------------------
+  joint_55:
+    type: velocity_controllers/JointVelocityController
+    joint: 55_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint_5:
+    type: velocity_controllers/JointVelocityController
+    joint: 5_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint_ft5:
+    type: velocity_controllers/JointVelocityController
+    joint: ft5_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+############################---6---############################
+  # Position Controllers ---------------------------------------
+  joint_666:
+    type: velocity_controllers/JointVelocityController
+    joint: 666_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  # Position Controllers ---------------------------------------
+  joint_66:
+    type: velocity_controllers/JointVelocityController
+    joint: 66_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint_6:
+    type: velocity_controllers/JointVelocityController
+    joint: 6_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint_ft6:
+    type: velocity_controllers/JointVelocityController
+    joint: ft6_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+############################---7---############################
+  # Position Controllers ---------------------------------------
+  joint_777:
+    type: velocity_controllers/JointVelocityController
+    joint: 777_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  # Position Controllers ---------------------------------------
+  joint_77:
+    type: velocity_controllers/JointVelocityController
+    joint: 77_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint_7:
+    type: velocity_controllers/JointVelocityController
+    joint: 7_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint_ft7:
+    type: velocity_controllers/JointVelocityController
+    joint: ft7_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+############################---8---############################
+  # Position Controllers ---------------------------------------
+  joint_888:
+    type: velocity_controllers/JointVelocityController
+    joint: 888_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  # Position Controllers ---------------------------------------
+  joint_88:
+    type: velocity_controllers/JointVelocityController
+    joint: 88_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint_8:
+    type: velocity_controllers/JointVelocityController
+    joint: 8_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint_ft8:
+    type: velocity_controllers/JointVelocityController
+    joint: ft8_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+############################---9---############################
+  # Position Controllers ---------------------------------------
+  joint_999:
+    type: velocity_controllers/JointVelocityController
+    joint: 999_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  # Position Controllers ---------------------------------------
+  joint_99:
+    type: velocity_controllers/JointVelocityController
+    joint: 99_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint_9:
+    type: velocity_controllers/JointVelocityController
+    joint: 9_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint_ft9:
+    type: velocity_controllers/JointVelocityController
+    joint: ft9_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+############################---10---############################
+  # Position Controllers ---------------------------------------
+  joint_101010:
+    type: velocity_controllers/JointVelocityController
+    joint: 101010_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  # Position Controllers ---------------------------------------
+  joint_1010:
+    type: velocity_controllers/JointVelocityController
+    joint: 1010_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint_10:
+    type: velocity_controllers/JointVelocityController
+    joint: 10_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint_ft10:
+    type: velocity_controllers/JointVelocityController
+    joint: ft10_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+############################---11---############################
+  # Position Controllers ---------------------------------------
+  joint_111111:
+    type: velocity_controllers/JointVelocityController
+    joint: 111111_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  # Position Controllers ---------------------------------------
+  joint_1111:
+    type: velocity_controllers/JointVelocityController
+    joint: 1111_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint__11:
+    type: velocity_controllers/JointVelocityController
+    joint: 11__Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint_ft11:
+    type: velocity_controllers/JointVelocityController
+    joint: ft11_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+############################---12---############################
+  # Position Controllers ---------------------------------------
+  joint_121212:
+    type: velocity_controllers/JointVelocityController
+    joint: 121212_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  # Position Controllers ---------------------------------------
+  joint_1212:
+    type: velocity_controllers/JointVelocityController
+    joint: 1212_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint_12:
+    type: velocity_controllers/JointVelocityController
+    joint: 12_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint_ft12:
+    type: velocity_controllers/JointVelocityController
+    joint: ft12_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+############################---13---############################
+  # Position Controllers ---------------------------------------
+  joint_131313:
+    type: velocity_controllers/JointVelocityController
+    joint: 131313_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  # Position Controllers ---------------------------------------
+  joint_1313:
+    type: velocity_controllers/JointVelocityController
+    joint: 1313_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint_13:
+    type: velocity_controllers/JointVelocityController
+    joint: 13_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint_ft13:
+    type: velocity_controllers/JointVelocityController
+    joint: ft13_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+############################---14---############################
+  # Position Controllers ---------------------------------------
+  joint_141414:
+    type: velocity_controllers/JointVelocityController
+    joint: 141414_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  # Position Controllers ---------------------------------------
+  joint_1414:
+    type: velocity_controllers/JointVelocityController
+    joint: 1414_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint_14:
+    type: velocity_controllers/JointVelocityController
+    joint: 14_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+      # Position Controllers ---------------------------------------
+  joint_ft14:
+    type: velocity_controllers/JointVelocityController
+    joint: ft14_Joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}

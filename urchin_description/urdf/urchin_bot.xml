@@ -1,0 +1,4595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter 
+    /**
+    ********************************************************************************************************
+    * <one line to give the program's name and a brief idea of what it does.>
+    * Copyright (C) <2022>  <jacky>
+    * 
+    * This program is free software: you can redistribute it and/or modify
+    * it under the terms of the GNU General Public License as published by
+    * the Free Software Foundation, either version 3 of the License, or
+    * (at your option) any later version.
+    * 
+    * This program is distributed in the hope that it will be useful,
+    * but WITHOUT ANY WARRANTY; without even the implied warranty of
+    * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    * GNU General Public License for more details.
+    * 
+    * You should have received a copy of the GNU General Public License
+    * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+    ********************************************************************************************************
+    */-->
+<robot
+  name="urchin_bot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="3.78577624307664E-19 -1.65458410217222E-08 -1.62431018793159E-09"
+        rpy="0 0 0" />
+      <mass
+        value="1.0" />
+      <inertia
+        ixx="0.147611622393674"
+        ixy="4.19975741229372E-10"
+        ixz="2.67988850568564E-07"
+        iyy="0.147516565931428"
+        iyz="2.74680313583683E-14"
+        izz="0.147611361219588" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="255 153 18 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="111_Link">
+    <inertial>
+      <origin
+        xyz="0.0457499999999999 -6.41847686111419E-17 3.46944695195361E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0560538669216758" />
+      <inertia
+        ixx="2.16648195652275E-05"
+        ixy="1.48230765769503E-19"
+        ixz="-5.9292306307801E-21"
+        iyy="4.9940492060531E-05"
+        iyz="-3.98105485209521E-20"
+        izz="4.99404920605313E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/111_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="255 218 185 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/111_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="111_Joint"
+    type="prismatic">
+    <origin
+      xyz="0.037649817747072 -0.0372823462781743 -0.0376498057619858"
+      rpy="0.529268775136367 0.617781282288792 -0.780495784724043" />
+    <parent
+      link="base_link" />
+    <child
+      link="111_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="11_Link">
+    <inertial>
+      <origin
+        xyz="0.04575 -4.16333634234434E-17 -2.08166817117217E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0416810805315026" />
+      <inertia
+        ixx="9.0239539350703E-06"
+        ixy="-2.96461531539005E-21"
+        ixz="-5.71747239396653E-21"
+        iyy="3.35923458408579E-05"
+        iyz="-3.3881317890172E-21"
+        izz="3.35923458408579E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/11_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/11_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="11_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="111_Link" />
+    <child
+      link="11_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="1_Link">
+    <inertial>
+      <origin
+        xyz="0.03975 -6.93889390390723E-18 -6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0359649526982959" />
+      <inertia
+        ixx="2.58947659427731E-06"
+        ixy="1.74700545371199E-21"
+        ixz="-8.470329472543E-21"
+        iyy="2.02370293214224E-05"
+        iyz="-8.470329472543E-22"
+        izz="2.02370293214224E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="1_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="11_Link" />
+    <child
+      link="1_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="ft1_Link">
+    <inertial>
+      <origin
+        xyz="0 -6.93889390390723E-18 6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.00723822947387088" />
+      <inertia
+        ixx="4.16922017694963E-07"
+        ixy="-3.30872245021211E-23"
+        ixz="0"
+        iyy="4.16922017694963E-07"
+        iyz="5.29395592033938E-23"
+        izz="4.16922017694963E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ft1_Joint"
+    type="fixed">
+    <origin
+      xyz="0.0795 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="1_Link" />
+    <child
+      link="ft1_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.01"
+      upper="0.001"
+      effort="30"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="222_Link">
+    <inertial>
+      <origin
+        xyz="0.0457499999999999 -5.20417042793042E-18 7.63278329429795E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0560538669216758" />
+      <inertia
+        ixx="2.16648195652276E-05"
+        ixy="1.09690766669432E-19"
+        ixz="-6.26804380968182E-20"
+        iyy="4.99404920605312E-05"
+        iyz="4.2351647362715E-20"
+        izz="4.9940492060531E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/222_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/222_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="222_Joint"
+    type="prismatic">
+    <origin
+      xyz="-0.037649817747072 -0.0372823462781743 -0.0376498057619858"
+      rpy="-0.529268775136367 0.617781282288792 -2.36109686886575" />
+    <parent
+      link="base_link" />
+    <child
+      link="222_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="22_Link">
+    <inertial>
+      <origin
+        xyz="0.04575 -3.64291929955129E-17 1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0416810805315026" />
+      <inertia
+        ixx="9.0239539350703E-06"
+        ixy="-5.50571415715295E-21"
+        ixz="3.59989002583078E-21"
+        iyy="3.35923458408579E-05"
+        iyz="4.2351647362715E-21"
+        izz="3.35923458408579E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/22_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/22_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="22_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="222_Link" />
+    <child
+      link="22_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="2_Link">
+    <inertial>
+      <origin
+        xyz="0.03975 -8.67361737988404E-18 6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0359649526982959" />
+      <inertia
+        ixx="2.58947659427731E-06"
+        ixy="-5.1351372427292E-21"
+        ixz="-8.15269211732264E-21"
+        iyy="2.02370293214224E-05"
+        iyz="8.470329472543E-22"
+        izz="2.02370293214224E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="2_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="22_Link" />
+    <child
+      link="2_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="ft2_Link">
+    <inertial>
+      <origin
+        xyz="0 6.93889390390723E-18 6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.00723822947387088" />
+      <inertia
+        ixx="4.16922017694963E-07"
+        ixy="-1.32348898008484E-23"
+        ixz="3.97046694025453E-23"
+        iyy="4.16922017694963E-07"
+        iyz="-7.94093388050907E-23"
+        izz="4.16922017694963E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ft2_Joint"
+    type="fixed">
+    <origin
+      xyz="0.0795 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="2_Link" />
+    <child
+      link="ft2_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.01"
+      upper="0.001"
+      effort="30"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="333_Link">
+    <inertial>
+      <origin
+        xyz="0.0457499999999999 5.72458747072346E-17 -6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0560538669216758" />
+      <inertia
+        ixx="2.16648195652275E-05"
+        ixy="-1.0545560193316E-19"
+        ixz="-1.34678238613434E-19"
+        iyy="4.99404920605313E-05"
+        iyz="2.62580213648833E-20"
+        izz="4.99404920605313E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/333_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/333_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="333_Joint"
+    type="prismatic">
+    <origin
+      xyz="-0.037649817747072 -0.0372823462781743 0.0376498297321582"
+      rpy="0.529268775136367 -0.617781282288792 -2.36109686886575" />
+    <parent
+      link="base_link" />
+    <child
+      link="333_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="33_Link">
+    <inertial>
+      <origin
+        xyz="0.04575 4.16333634234434E-17 3.46944695195361E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0416810805315026" />
+      <inertia
+        ixx="9.0239539350703E-06"
+        ixy="5.50571415715295E-21"
+        ixz="-4.2351647362715E-22"
+        iyy="3.35923458408579E-05"
+        iyz="-4.2351647362715E-21"
+        izz="3.35923458408579E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/33_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/33_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="33_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="333_Link" />
+    <child
+      link="33_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="3_Link">
+    <inertial>
+      <origin
+        xyz="0.03975 2.08166817117217E-17 -1.73472347597681E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0359649526982959" />
+      <inertia
+        ixx="2.58947659427731E-06"
+        ixy="-1.74700545371199E-21"
+        ixz="8.470329472543E-21"
+        iyy="2.02370293214224E-05"
+        iyz="-8.470329472543E-22"
+        izz="2.02370293214224E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/3_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="3_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="33_Link" />
+    <child
+      link="3_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="ft3_Link">
+    <inertial>
+      <origin
+        xyz="0 6.93889390390723E-18 -6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.00723822947387088" />
+      <inertia
+        ixx="4.16922017694963E-07"
+        ixy="4.63221143029695E-23"
+        ixz="0"
+        iyy="4.16922017694963E-07"
+        iyz="-1.32348898008484E-23"
+        izz="4.16922017694963E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft3_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ft3_Joint"
+    type="fixed">
+    <origin
+      xyz="0.0795 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="3_Link" />
+    <child
+      link="ft3_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.01"
+      upper="0.001"
+      effort="30"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="444_Link">
+    <inertial>
+      <origin
+        xyz="0.0457499999999999 2.94902990916057E-17 -5.55111512312578E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0560538669216758" />
+      <inertia
+        ixx="2.16648195652276E-05"
+        ixy="-2.09640654445439E-19"
+        ixz="2.79520872593919E-20"
+        iyy="4.99404920605314E-05"
+        iyz="-9.3173624197973E-21"
+        izz="4.99404920605312E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/444_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/444_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="444_Joint"
+    type="prismatic">
+    <origin
+      xyz="0.037649817747072 -0.0372823462781743 0.0376498297321582"
+      rpy="-0.529268775136367 -0.617781282288792 -0.780495784724043" />
+    <parent
+      link="base_link" />
+    <child
+      link="444_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="44_Link">
+    <inertial>
+      <origin
+        xyz="0.04575 3.64291929955129E-17 -1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0416810805315026" />
+      <inertia
+        ixx="9.0239539350703E-06"
+        ixy="5.50571415715295E-21"
+        ixz="-3.59989002583078E-21"
+        iyy="3.35923458408579E-05"
+        iyz="4.2351647362715E-21"
+        izz="3.35923458408579E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/44_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/44_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="44_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="444_Link" />
+    <child
+      link="44_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="4_Link">
+    <inertial>
+      <origin
+        xyz="0.03975 8.67361737988404E-18 -6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0359649526982959" />
+      <inertia
+        ixx="2.58947659427731E-06"
+        ixy="5.1351372427292E-21"
+        ixz="8.15269211732264E-21"
+        iyy="2.02370293214224E-05"
+        iyz="8.470329472543E-22"
+        izz="2.02370293214224E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/4_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/4_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="4_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="44_Link" />
+    <child
+      link="4_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="ft4_Link">
+    <inertial>
+      <origin
+        xyz="0 -6.93889390390723E-18 -6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.00723822947387088" />
+      <inertia
+        ixx="4.16922017694963E-07"
+        ixy="1.32348898008484E-23"
+        ixz="-3.97046694025453E-23"
+        iyy="4.16922017694963E-07"
+        iyz="-7.94093388050907E-23"
+        izz="4.16922017694963E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft4_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft4_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ft4_Joint"
+    type="fixed">
+    <origin
+      xyz="0.0795 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="4_Link" />
+    <child
+      link="ft4_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.01"
+      upper="0.001"
+      effort="30"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="555_Link">
+    <inertial>
+      <origin
+        xyz="0.04575 -1.21430643318376E-17 -3.46944695195361E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0560538669216758" />
+      <inertia
+        ixx="2.16648195652276E-05"
+        ixy="2.71050543121376E-20"
+        ixz="3.72694496791892E-20"
+        iyy="4.9940492060531E-05"
+        iyz="8.470329472543E-20"
+        izz="4.99404920605311E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/555_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/555_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="555_Joint"
+    type="prismatic">
+    <origin
+      xyz="0.037649817747072 0.0372825904474617 -0.0376498057619858"
+      rpy="2.61232387845343 0.617781282288792 0.780495784724043" />
+    <parent
+      link="base_link" />
+    <child
+      link="555_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="55_Link">
+    <inertial>
+      <origin
+        xyz="0.04575 1.73472347597681E-18 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0416810805315026" />
+      <inertia
+        ixx="9.02395393507032E-06"
+        ixy="-9.95263713023803E-21"
+        ixz="-1.58818677610181E-20"
+        iyy="3.35923458408579E-05"
+        iyz="4.2351647362715E-21"
+        izz="3.35923458408579E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/55_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/55_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="55_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="555_Link" />
+    <child
+      link="55_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="5_Link">
+    <inertial>
+      <origin
+        xyz="0.0397499999999999 -3.98986399474666E-17 2.08166817117217E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.035964952698296" />
+      <inertia
+        ixx="2.5894765942773E-06"
+        ixy="-1.95876369052557E-21"
+        ixz="-1.1964340379967E-20"
+        iyy="2.02370293214224E-05"
+        iyz="2.96461531539005E-21"
+        izz="2.02370293214224E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/5_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/5_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="5_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="55_Link" />
+    <child
+      link="5_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="ft5_Link">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 2.08166817117217E-17 1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.00723822947387088" />
+      <inertia
+        ixx="4.16922017694963E-07"
+        ixy="-2.64697796016969E-23"
+        ixz="-1.32348898008484E-23"
+        iyy="4.16922017694963E-07"
+        iyz="2.64697796016969E-23"
+        izz="4.16922017694963E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft5_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft5_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ft5_Joint"
+    type="fixed">
+    <origin
+      xyz="0.0795 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="5_Link" />
+    <child
+      link="ft5_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.01"
+      upper="0.001"
+      effort="30"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="666_Link">
+    <inertial>
+      <origin
+        xyz="0.04575 2.25514051876985E-17 -2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0560538669216758" />
+      <inertia
+        ixx="2.16648195652276E-05"
+        ixy="-2.32934060494933E-20"
+        ixz="3.98105485209521E-20"
+        iyy="4.9940492060531E-05"
+        iyz="-8.21621958836671E-20"
+        izz="4.99404920605311E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/666_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/666_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="666_Joint"
+    type="prismatic">
+    <origin
+      xyz="-0.037649817747072 0.0372825904474617 -0.0376498057619858"
+      rpy="-2.61232387845343 0.617781282288792 2.36109686886575" />
+    <parent
+      link="base_link" />
+    <child
+      link="666_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="66_Link">
+    <inertial>
+      <origin
+        xyz="0.04575 -1.73472347597681E-18 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0416810805315026" />
+      <inertia
+        ixx="9.02395393507032E-06"
+        ixy="1.41878018665095E-20"
+        ixz="-1.27054942088145E-20"
+        iyy="3.35923458408579E-05"
+        iyz="-4.2351647362715E-21"
+        izz="3.35923458408579E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/66_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/66_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="66_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="666_Link" />
+    <child
+      link="66_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="6_Link">
+    <inertial>
+      <origin
+        xyz="0.0397499999999999 -3.98986399474666E-17 -2.08166817117217E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.035964952698296" />
+      <inertia
+        ixx="2.5894765942773E-06"
+        ixy="9.89969757103464E-21"
+        ixz="-7.94093388050907E-21"
+        iyy="2.02370293214224E-05"
+        iyz="-2.5410988417629E-21"
+        izz="2.02370293214224E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/6_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/6_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="6_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="66_Link" />
+    <child
+      link="6_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="ft6_Link">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 -6.93889390390723E-18 6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.00723822947387088" />
+      <inertia
+        ixx="4.16922017694963E-07"
+        ixy="1.98523347012727E-23"
+        ixz="0"
+        iyy="4.16922017694963E-07"
+        iyz="-2.64697796016969E-23"
+        izz="4.16922017694963E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft6_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft6_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ft6_Joint"
+    type="fixed">
+    <origin
+      xyz="0.0795 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="6_Link" />
+    <child
+      link="ft6_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.01"
+      upper="0.001"
+      effort="30"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="777_Link">
+    <inertial>
+      <origin
+        xyz="0.04575 1.21430643318376E-17 3.46944695195361E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0560538669216758" />
+      <inertia
+        ixx="2.16648195652276E-05"
+        ixy="-2.71050543121376E-20"
+        ixz="-3.72694496791892E-20"
+        iyy="4.9940492060531E-05"
+        iyz="8.470329472543E-20"
+        izz="4.99404920605311E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/777_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/777_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="777_Joint"
+    type="prismatic">
+    <origin
+      xyz="-0.037649817747072 0.0372825904474617 0.0376498297321582"
+      rpy="2.61232387845343 -0.617781282288792 2.36109686886575" />
+    <parent
+      link="base_link" />
+    <child
+      link="777_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="77_Link">
+    <inertial>
+      <origin
+        xyz="0.04575 -1.73472347597681E-18 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0416810805315026" />
+      <inertia
+        ixx="9.02395393507032E-06"
+        ixy="1.16467030247466E-20"
+        ixz="1.43995601033231E-20"
+        iyy="3.35923458408579E-05"
+        iyz="1.6940658945086E-21"
+        izz="3.35923458408579E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/77_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/77_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="77_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="777_Link" />
+    <child
+      link="77_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="7_Link">
+    <inertial>
+      <origin
+        xyz="0.0397499999999999 3.98986399474666E-17 -2.08166817117217E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.035964952698296" />
+      <inertia
+        ixx="2.5894765942773E-06"
+        ixy="1.95876369052557E-21"
+        ixz="1.1964340379967E-20"
+        iyy="2.02370293214224E-05"
+        iyz="2.96461531539005E-21"
+        izz="2.02370293214224E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/7_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/7_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="7_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="77_Link" />
+    <child
+      link="7_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="ft7_Link">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 -2.08166817117217E-17 -1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.00723822947387088" />
+      <inertia
+        ixx="4.16922017694963E-07"
+        ixy="2.64697796016969E-23"
+        ixz="1.32348898008484E-23"
+        iyy="4.16922017694963E-07"
+        iyz="2.64697796016969E-23"
+        izz="4.16922017694963E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft7_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft7_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ft7_Joint"
+    type="fixed">
+    <origin
+      xyz="0.0795 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="7_Link" />
+    <child
+      link="ft7_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.01"
+      upper="0.001"
+      effort="30"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="888_Link">
+    <inertial>
+      <origin
+        xyz="0.04575 -2.25514051876985E-17 2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0560538669216758" />
+      <inertia
+        ixx="2.16648195652276E-05"
+        ixy="2.32934060494933E-20"
+        ixz="-3.98105485209521E-20"
+        iyy="4.9940492060531E-05"
+        iyz="-8.21621958836671E-20"
+        izz="4.99404920605311E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/888_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/888_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="888_Joint"
+    type="prismatic">
+    <origin
+      xyz="0.037649817747072 0.0372825904474617 0.0376498297321582"
+      rpy="-2.61232387845343 -0.617781282288792 0.780495784724043" />
+    <parent
+      link="base_link" />
+    <child
+      link="888_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="88_Link">
+    <inertial>
+      <origin
+        xyz="0.04575 1.73472347597681E-18 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0416810805315026" />
+      <inertia
+        ixx="9.02395393507032E-06"
+        ixy="-1.67289007082724E-20"
+        ixz="1.20702194983738E-20"
+        iyy="3.35923458408579E-05"
+        iyz="-4.2351647362715E-21"
+        izz="3.35923458408579E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/88_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/88_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="88_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="888_Link" />
+    <child
+      link="88_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="8_Link">
+    <inertial>
+      <origin
+        xyz="0.0397499999999999 3.98986399474666E-17 2.08166817117217E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.035964952698296" />
+      <inertia
+        ixx="2.5894765942773E-06"
+        ixy="-9.89969757103464E-21"
+        ixz="7.94093388050907E-21"
+        iyy="2.02370293214224E-05"
+        iyz="-2.5410988417629E-21"
+        izz="2.02370293214224E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/8_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/8_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="8_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="88_Link" />
+    <child
+      link="8_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="ft8_Link">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 6.93889390390723E-18 -6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.00723822947387088" />
+      <inertia
+        ixx="4.16922017694963E-07"
+        ixy="-1.98523347012727E-23"
+        ixz="0"
+        iyy="4.16922017694963E-07"
+        iyz="-2.64697796016969E-23"
+        izz="4.16922017694963E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft8_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft8_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ft8_Joint"
+    type="fixed">
+    <origin
+      xyz="0.0795 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="8_Link" />
+    <child
+      link="ft8_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.01"
+      upper="0.001"
+      effort="30"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="999_Link">
+    <inertial>
+      <origin
+        xyz="0.04575 3.83037258733916E-17 -2.69993589711857E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0560538669216759" />
+      <inertia
+        ixx="2.16648195652277E-05"
+        ixy="-5.44764340774756E-21"
+        ixz="1.43180652475315E-20"
+        iyy="4.99404920605303E-05"
+        iyz="-1.78396039658832E-35"
+        izz="4.99404920605303E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/999_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/999_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="999_Joint"
+    type="prismatic">
+    <origin
+      xyz="0.065 0 0"
+      rpy="-1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="999_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="99_Link">
+    <inertial>
+      <origin
+        xyz="0.04575 2.21161232361456E-17 -9.22700131157155E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0416810805315026" />
+      <inertia
+        ixx="9.02395393507031E-06"
+        ixy="-5.15661400199121E-21"
+        ixz="1.98477633736202E-21"
+        iyy="3.35923458408579E-05"
+        iyz="1.33868419613747E-37"
+        izz="3.35923458408579E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/99_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/99_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="99_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="999_Link" />
+    <child
+      link="99_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="9_Link">
+    <inertial>
+      <origin
+        xyz="0.03975 2.05205089677395E-17 -8.90126249168433E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.035964952698296" />
+      <inertia
+        ixx="2.58947659427731E-06"
+        ixy="-4.14298372997354E-21"
+        ixz="1.38293775040615E-21"
+        iyy="2.02370293214224E-05"
+        iyz="3.08479322935832E-37"
+        izz="2.02370293214224E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/9_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/9_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="9_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="99_Link" />
+    <child
+      link="9_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="ft9_Link">
+    <inertial>
+      <origin
+        xyz="0 -1.31280427748045E-18 -2.77670429080098E-19"
+        rpy="0 0 0" />
+      <mass
+        value="0.00723822947387088" />
+      <inertia
+        ixx="4.16922017694963E-07"
+        ixy="0"
+        ixz="-5.97670919427617E-55"
+        iyy="4.16922017694963E-07"
+        iyz="-1.09515266266747E-38"
+        izz="4.16922017694963E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft9_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft9_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ft9_Joint"
+    type="fixed">
+    <origin
+      xyz="0.0795 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="9_Link" />
+    <child
+      link="ft9_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.01"
+      upper="0.001"
+      effort="30"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="101010_Link">
+    <inertial>
+      <origin
+        xyz="0.04575 -2.83957914564009E-18 -1.34363956706287E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0560538669216759" />
+      <inertia
+        ixx="2.16648195652277E-05"
+        ixy="1.22218625636003E-21"
+        ixz="1.08552940660204E-20"
+        iyy="4.99404920605303E-05"
+        iyz="-2.25157687561689E-35"
+        izz="4.99404920605303E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/101010_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/101010_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="101010_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 -0.0649999880149138"
+      rpy="1.5707963267949 1.5707963267949 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="101010_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="1010_Link">
+    <inertial>
+      <origin
+        xyz="0.04575 -2.20767701727385E-17 3.13977806300895E-19"
+        rpy="0 0 0" />
+      <mass
+        value="0.0416810805315026" />
+      <inertia
+        ixx="9.02395393507031E-06"
+        ixy="5.0843647728663E-21"
+        ixz="-1.98477633736202E-21"
+        iyy="3.35923458408579E-05"
+        iyz="6.82348385647164E-38"
+        izz="3.35923458408579E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/1010_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/1010_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="1010_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="101010_Link" />
+    <child
+      link="1010_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="10_Link">
+    <inertial>
+      <origin
+        xyz="0.03975 -2.06233516314053E-17 -1.17610135863202E-20"
+        rpy="0 0 0" />
+      <mass
+        value="0.035964952698296" />
+      <inertia
+        ixx="2.58947659427731E-06"
+        ixy="4.06212841150099E-21"
+        ixz="-1.38293775040615E-21"
+        iyy="2.02370293214224E-05"
+        iyz="3.43666440708517E-37"
+        izz="2.02370293214224E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/10_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/10_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="10_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="1010_Link" />
+    <child
+      link="10_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="ft10_Link">
+    <inertial>
+      <origin
+        xyz="0 7.99107920957706E-19 2.77670429080098E-19"
+        rpy="0 0 0" />
+      <mass
+        value="0.00723822947387088" />
+      <inertia
+        ixx="4.16922017694963E-07"
+        ixy="0"
+        ixz="1.14209800587726E-54"
+        iyy="4.16922017694963E-07"
+        iyz="-1.43986115182063E-38"
+        izz="4.16922017694963E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft10_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft10_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ft10_Joint"
+    type="fixed">
+    <origin
+      xyz="0.0795 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="10_Link" />
+    <child
+      link="ft10_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.01"
+      upper="0.001"
+      effort="30"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="111111_Link">
+    <inertial>
+      <origin
+        xyz="0.04575 -1.10990931454633E-17 2.69993589711857E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0560538669216759" />
+      <inertia
+        ixx="2.16648195652277E-05"
+        ixy="-1.79892074549234E-21"
+        ixz="-1.43180652475316E-20"
+        iyy="4.99404920605303E-05"
+        iyz="-2.18097865658796E-35"
+        izz="4.99404920605303E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/111111_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/111111_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="111111_Joint"
+    type="prismatic">
+    <origin
+      xyz="-0.065 0 0"
+      rpy="-1.5707963267949 0 3.14159265358979" />
+    <parent
+      link="base_link" />
+    <child
+      link="111111_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="1111_Link">
+    <inertial>
+      <origin
+        xyz="0.04575 4.62364921413702E-18 9.22700131157155E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0416810805315026" />
+      <inertia
+        ixx="9.02395393507031E-06"
+        ixy="9.32182909061512E-22"
+        ixz="-1.98477633736202E-21"
+        iyy="3.35923458408579E-05"
+        iyz="-3.23317640252504E-38"
+        izz="3.35923458408579E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/1111_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/1111_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="1111_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="111111_Link" />
+    <child
+      link="1111_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="11__Link">
+    <inertial>
+      <origin
+        xyz="0.03975 4.94735994957789E-18 8.90126249168433E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.035964952698296" />
+      <inertia
+        ixx="2.58947659427731E-06"
+        ixy="-6.0551035210048E-23"
+        ixz="-1.38293775040615E-21"
+        iyy="2.02370293214224E-05"
+        iyz="5.89255973464964E-38"
+        izz="2.02370293214224E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/11__Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/11__Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="11__Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="1111_Link" />
+    <child
+      link="11__Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="ft11_Link">
+    <inertial>
+      <origin
+        xyz="0 1.05672209974205E-18 2.77670429080098E-19"
+        rpy="0 0 0" />
+      <mass
+        value="0.00723822947387088" />
+      <inertia
+        ixx="4.16922017694963E-07"
+        ixy="0"
+        ixz="1.47831076720515E-54"
+        iyy="4.16922017694963E-07"
+        iyz="-1.35409075273321E-38"
+        izz="4.16922017694963E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft11_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft11_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ft11_Joint"
+    type="fixed">
+    <origin
+      xyz="0.0795 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="11__Link" />
+    <child
+      link="ft11_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.01"
+      upper="0.001"
+      effort="30"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="121212_Link">
+    <inertial>
+      <origin
+        xyz="0.04575 4.20934389594921E-17 -1.8086335465915E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0560538669216759" />
+      <inertia
+        ixx="2.16648195652277E-05"
+        ixy="-7.98540251589326E-21"
+        ixz="1.43180652475316E-20"
+        iyy="4.99404920605303E-05"
+        iyz="-1.85353588904321E-35"
+        izz="4.99404920605303E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/121212_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/121212_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="121212_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0.0650000119850862"
+      rpy="1.5707963267949 -1.5707963267949 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="121212_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="1212_Link">
+    <inertial>
+      <origin
+        xyz="0.04575 2.45231749836082E-17 -3.13977806300895E-19"
+        rpy="0 0 0" />
+      <mass
+        value="0.0416810805315026" />
+      <inertia
+        ixx="9.02395393507031E-06"
+        ixy="-6.08738073421574E-21"
+        ixz="1.98477633736202E-21"
+        iyy="3.35923458408579E-05"
+        iyz="1.9422777415968E-37"
+        izz="3.35923458408579E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/1212_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/1212_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="1212_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="121212_Link" />
+    <child
+      link="1212_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="12_Link">
+    <inertial>
+      <origin
+        xyz="0.03975 2.33369440939091E-17 1.17610135863202E-20"
+        rpy="0 0 0" />
+      <mass
+        value="0.035964952698296" />
+      <inertia
+        ixx="2.58947659427731E-06"
+        ixy="-5.02386033267223E-21"
+        ixz="1.38293775040615E-21"
+        iyy="2.02370293214224E-05"
+        iyz="3.94795361546064E-37"
+        izz="2.02370293214224E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/12_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/12_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="12_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="1212_Link" />
+    <child
+      link="12_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="ft12_Link">
+    <inertial>
+      <origin
+        xyz="0 4.58532620692198E-20 -2.77670429080098E-19"
+        rpy="0 0 0" />
+      <mass
+        value="0.00723822947387088" />
+      <inertia
+        ixx="4.16922017694963E-07"
+        ixy="1.31057312587339E-54"
+        ixz="2.3814698086918E-54"
+        iyy="4.16922017694963E-07"
+        iyz="-1.32441602450177E-38"
+        izz="4.16922017694963E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft12_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft12_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ft12_Joint"
+    type="fixed">
+    <origin
+      xyz="0.0795 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="12_Link" />
+    <child
+      link="ft12_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.01"
+      upper="0.001"
+      effort="30"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="131313_Link">
+    <inertial>
+      <origin
+        xyz="0.04575 2.39707257767011E-17 -2.02178773209072E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0560538669216759" />
+      <inertia
+        ixx="2.16648195652277E-05"
+        ixy="-2.95557568058158E-21"
+        ixz="1.2586679656776E-20"
+        iyy="4.99404920605303E-05"
+        iyz="-2.08693084560913E-35"
+        izz="4.99404920605303E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/131313_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/131313_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="131313_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 -0.0649998779153563 0"
+      rpy="0 0 -1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="131313_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="1313_Link">
+    <inertial>
+      <origin
+        xyz="0.04575 8.47445380877433E-18 -2.44551966129308E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0416810805315026" />
+      <inertia
+        ixx="9.02395393507031E-06"
+        ixy="-3.29508053754215E-21"
+        ixz="4.80396211981E-22"
+        iyy="3.35923458408579E-05"
+        iyz="5.38212101196181E-37"
+        izz="3.35923458408579E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/1313_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/1313_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="1313_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="131313_Link" />
+    <child
+      link="1313_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="13_Link">
+    <inertial>
+      <origin
+        xyz="0.03975 1.29481685002166E-17 2.42718382893935E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.035964952698296" />
+      <inertia
+        ixx="2.58947659427731E-06"
+        ixy="-4.99709267500446E-21"
+        ixz="-4.91439478204856E-21"
+        iyy="2.02370293214224E-05"
+        iyz="-1.68276720614957E-36"
+        izz="2.02370293214224E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/13_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/13_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="13_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="1313_Link" />
+    <child
+      link="13_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="ft13_Link">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 -3.48911487911171E-19 7.17123239656935E-19"
+        rpy="0 0 0" />
+      <mass
+        value="0.00723822947387088" />
+      <inertia
+        ixx="4.16922017694963E-07"
+        ixy="-5.87747175411144E-39"
+        ixz="0"
+        iyy="4.16922017694963E-07"
+        iyz="1.24985952515941E-23"
+        izz="4.16922017694963E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft13_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft13_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ft13_Joint"
+    type="fixed">
+    <origin
+      xyz="0.0795 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="13_Link" />
+    <child
+      link="ft13_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.01"
+      upper="0.001"
+      effort="30"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="141414_Link">
+    <inertial>
+      <origin
+        xyz="0.04575 2.3971E-17 2.2581E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.056054" />
+      <inertia
+        ixx="2.1665E-05"
+        ixy="-2.9556E-21"
+        ixz="9.1239E-21"
+        iyy="4.994E-05"
+        iyz="-1.8897E-35"
+        izz="4.994E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/141414_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.49412 0.49412 0.52157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/141414_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="141414_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0.065 0"
+      rpy="3.1416 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="141414_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="1414_Link">
+    <inertial>
+      <origin
+        xyz="0.04575 8.4745E-18 2.003E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.041681" />
+      <inertia
+        ixx="9.024E-06"
+        ixy="-3.2951E-21"
+        ixz="-2.5284E-21"
+        iyy="3.3592E-05"
+        iyz="-1.1837E-36"
+        izz="3.3592E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/1414_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.49412 0.49412 0.52157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/1414_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="1414_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="141414_Link" />
+    <child
+      link="1414_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="14_Link">
+    <inertial>
+      <origin
+        xyz="0.03975 -1.1999E-19 -2.4272E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.035965" />
+      <inertia
+        ixx="2.5895E-06"
+        ixy="2.8359E-21"
+        ixz="4.9144E-21"
+        iyy="2.0237E-05"
+        iyz="-8.2098E-37"
+        izz="2.0237E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/14_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.49412 0.49412 0.52157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/14_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="14_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="1414_Link" />
+    <child
+      link="14_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.08"
+      upper="0.001"
+      effort="40"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="ft14_Link">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 1.23259516440783E-32 -7.17123239656942E-19"
+        rpy="0 0 0" />
+      <mass
+        value="0.00723822947387088" />
+      <inertia
+        ixx="4.16922017694963E-07"
+        ixy="0"
+        ixz="0"
+        iyy="4.16922017694963E-07"
+        iyz="1.24985952515941E-23"
+        izz="4.16922017694963E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft14_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.494117647058824 0.494117647058824 0.52156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urchin_description/meshes/ft14_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ft14_Joint"
+    type="fixed">
+    <origin
+      xyz="0.0795 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="14_Link" />
+    <child
+      link="ft14_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.01"
+      upper="0.001"
+      effort="30"
+      velocity="1" />
+    <dynamics
+      friction="1" />
+  </joint>
+
+
+
+
+
+<!--##########################___ft_plugin___##########################-->
+<!--##########################___ft_plugin___##########################-->
+<!--##########################___ft_plugin___##########################-->
+<!--##########################___ft_plugin___##########################-->
+<!--##########################___ft_plugin___##########################-->
+<!--##########################___ft_plugin___##########################-->
+<!--##########################___ft_plugin___##########################-->
+<!--##########################___ft_plugin___##########################-->
+<!--##########################___ft_plugin___##########################-->
+<!--##########################___ft_plugin___##########################-->
+
+<gazebo reference="ft1_Joint">
+<provideFeedback>true</provideFeedback>
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+
+
+<gazebo>
+<plugin name="ft_sensor" filename="libgazebo_ros_ft_sensor.so">
+<updateRate>1000.0</updateRate>
+<topicName>ft1_sensor_topic</topicName>
+<jointName>ft1_Joint</jointName>
+</plugin>
+</gazebo>
+
+<gazebo reference="ft2_Joint">
+<provideFeedback>true</provideFeedback>
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+
+<gazebo>
+<plugin name="ft_sensor" filename="libgazebo_ros_ft_sensor.so">
+<updateRate>1000.0</updateRate>
+<topicName>ft2_sensor_topic</topicName>
+<jointName>ft2_Joint</jointName>
+</plugin>
+</gazebo>
+
+<gazebo reference="ft3_Joint">
+<provideFeedback>true</provideFeedback>
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+
+<gazebo>
+<plugin name="ft_sensor" filename="libgazebo_ros_ft_sensor.so">
+<updateRate>1000.0</updateRate>
+<topicName>ft3_sensor_topic</topicName>
+<jointName>ft3_Joint</jointName>
+</plugin>
+</gazebo>
+
+<gazebo reference="ft4_Joint">
+<provideFeedback>true</provideFeedback>
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+
+<gazebo>
+<plugin name="ft_sensor" filename="libgazebo_ros_ft_sensor.so">
+<updateRate>1000.0</updateRate>
+<topicName>ft4_sensor_topic</topicName>
+<jointName>ft4_Joint</jointName>
+</plugin>
+</gazebo>
+
+<gazebo reference="ft5_Joint">
+<provideFeedback>true</provideFeedback>
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+
+<gazebo>
+<plugin name="ft_sensor" filename="libgazebo_ros_ft_sensor.so">
+<updateRate>1000.0</updateRate>
+<topicName>ft5_sensor_topic</topicName>
+<jointName>ft5_Joint</jointName>
+</plugin>
+</gazebo>
+
+<gazebo reference="ft6_Joint">
+<provideFeedback>true</provideFeedback>
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+
+<gazebo>
+<plugin name="ft_sensor" filename="libgazebo_ros_ft_sensor.so">
+<updateRate>1000.0</updateRate>
+<topicName>ft6_sensor_topic</topicName>
+<jointName>ft6_Joint</jointName>
+</plugin>
+</gazebo>
+
+<gazebo reference="ft7_Joint">
+<provideFeedback>true</provideFeedback>
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+
+<gazebo>
+<plugin name="ft_sensor" filename="libgazebo_ros_ft_sensor.so">
+<updateRate>1000.0</updateRate>
+<topicName>ft7_sensor_topic</topicName>
+<jointName>ft7_Joint</jointName>
+</plugin>
+</gazebo>
+
+<gazebo reference="ft8_Joint">
+<provideFeedback>true</provideFeedback>
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+
+<gazebo>
+<plugin name="ft_sensor" filename="libgazebo_ros_ft_sensor.so">
+<updateRate>1000.0</updateRate>
+<topicName>ft8_sensor_topic</topicName>
+<jointName>ft8_Joint</jointName>
+</plugin>
+</gazebo>
+
+<gazebo reference="ft9_Joint">
+<provideFeedback>true</provideFeedback>
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+
+<gazebo>
+<plugin name="ft_sensor" filename="libgazebo_ros_ft_sensor.so">
+<updateRate>1000.0</updateRate>
+<topicName>ft9_sensor_topic</topicName>
+<jointName>ft9_Joint</jointName>
+</plugin>
+</gazebo>
+
+<gazebo reference="ft10_Joint">
+<provideFeedback>true</provideFeedback>
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+
+<gazebo>
+<plugin name="ft_sensor" filename="libgazebo_ros_ft_sensor.so">
+<updateRate>1000.0</updateRate>
+<topicName>ft10_sensor_topic</topicName>
+<jointName>ft10_Joint</jointName>
+</plugin>
+</gazebo>
+
+<gazebo reference="ft11_Joint">
+<provideFeedback>true</provideFeedback>
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+
+<gazebo>
+<plugin name="ft_sensor" filename="libgazebo_ros_ft_sensor.so">
+<updateRate>1000.0</updateRate>
+<topicName>ft11_sensor_topic</topicName>
+<jointName>ft11_Joint</jointName>
+</plugin>
+</gazebo>
+
+<gazebo reference="ft12_Joint">
+<provideFeedback>true</provideFeedback>
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+
+<gazebo>
+<plugin name="ft_sensor" filename="libgazebo_ros_ft_sensor.so">
+<updateRate>1000.0</updateRate>
+<topicName>ft12_sensor_topic</topicName>
+<jointName>ft12_Joint</jointName>
+</plugin>
+</gazebo>
+
+<gazebo reference="ft13_Joint">
+<provideFeedback>true</provideFeedback>
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+
+<gazebo>
+<plugin name="ft_sensor" filename="libgazebo_ros_ft_sensor.so">
+<updateRate>1000.0</updateRate>
+<topicName>ft13_sensor_topic</topicName>
+<jointName>ft13_Joint</jointName>
+</plugin>
+</gazebo>
+
+<gazebo reference="ft14_Joint">
+<provideFeedback>true</provideFeedback>
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+
+<gazebo>
+<plugin name="ft_sensor" filename="libgazebo_ros_ft_sensor.so">
+<updateRate>1000.0</updateRate>
+<topicName>ft14_sensor_topic</topicName>
+<jointName>ft14_Joint</jointName>
+</plugin>
+</gazebo>
+
+
+
+
+
+<!--##########################___transmission_interface___##########################-->
+<!--##########################___transmission_interface___##########################-->
+<!--##########################___transmission_interface___##########################-->
+<!--##########################___transmission_interface___##########################-->
+<!--##########################___transmission_interface___##########################-->
+<!--##########################___transmission_interface___##########################-->
+<!--##########################___transmission_interface___##########################-->
+<!--##########################___transmission_interface___##########################-->
+<!--##########################___transmission_interface___##########################-->
+<!--##########################___transmission_interface___##########################-->
+<!--##########################___transmission_interface___##########################-->
+ <transmission name="tran_111">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="111_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_111">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+ <transmission name="tran_11">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="11_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_11">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran_1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="1_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_1">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran_ft1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ft1_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_ft1">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+ <transmission name="tran_222">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="222_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_222">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+ <transmission name="tran_22">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="22_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_22">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran_2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="2_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_2">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran_ft2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ft2_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_ft2">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  
+ <transmission name="tran_333">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="333_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_333">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+ <transmission name="tran_33">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="33_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_33">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran_3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="3_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_3">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran_ft3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ft3_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_ft3">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  
+ <transmission name="tran_444">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="444_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_444">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+ <transmission name="tran_44">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="44_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_44">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran_4">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="4_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_4">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran_ft4">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ft4_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_ft4">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  
+ <transmission name="tran_555">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="555_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_555">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+ <transmission name="tran_55">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="55_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_55">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran_5">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="5_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_5">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran_ft5">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ft5_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_ft5">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+   <transmission name="tran_666">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="666_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_666">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+ <transmission name="tran_66">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="66_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_66">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran_6">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="6_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_6">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran_ft6">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ft6_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_ft6">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+ <transmission name="777">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="777_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_777">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+ <transmission name="tran_77">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="77_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_77">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran_7">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="7_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_7">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran_ft7">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ft7_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_ft7">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  
+ <transmission name="tran_888">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="888_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_888">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+ <transmission name="tran_88">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="88_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_88">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran_8">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="8_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_8">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran_ft8">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ft8_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_ft8">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  
+ <transmission name="tran_999">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="999_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_999">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+ <transmission name="tran_99">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="99_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_99">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran_9">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="9_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_9">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran_ft9">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ft9_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_ft9">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  
+ <transmission name="tran_101010">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="101010_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_101010">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+ <transmission name="tran_1010">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="1010_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_1010">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran_10">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="10_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_10">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran_ft10">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ft10_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_ft10">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  
+ <transmission name="tran_111111">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="111111_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_111111">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+ <transmission name="tran_1111">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="1111_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_1111">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran__11">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="11__Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor__11">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran_ft11">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ft11_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_ft11">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  
+ <transmission name="tran_121212">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="121212_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_121212">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+ <transmission name="tran_1212">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="1212_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_1212">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran_12">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="12_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_12">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran_ft12">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ft12_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_ft12">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  
+ <transmission name="tran_131313">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="131313_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_131313">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+ <transmission name="tran_1313">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="1313_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_1313">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran_13">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="13_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_13">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran_ft13">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ft13_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_ft13">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+ <transmission name="tran_141414">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="141414_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_141414">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+ <transmission name="tran_1414">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="1414_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_1414">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran_14">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="14_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_14">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran_ft14">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ft14_Joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_ft14">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+ <!--gazebo_ros_control. -->
+    <gazebo>
+      <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+        <robotNamespace>/urchin_bot</robotNamespace>
+      </plugin>
+    </gazebo>
+
+
+ <!--Show the trajectory of trunk center. -->
+<gazebo>
+    <plugin filename="libLinkPlot3DPlugin.so" name="3dplot">
+      <frequency>1000</frequency>
+      <plot>
+        <link>base_link</link>
+        <pose>0 0 0 0 0 0</pose>
+        <material>Gazebo/DarkYellow</material>
+      </plot>
+    </plugin>
+  </gazebo>
+  <!-- Visualization of Foot contacts. -->
+<gazebo reference="fix_Link">
+    <visual>
+      <plugin filename="libunitreeDrawForcePlugin.so" name="drawForcePlugin">
+        <topicName>fix_contact</topicName>
+      </plugin>
+    </visual>
+  </gazebo>
+
+<gazebo>
+  <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
+    <alwaysOn>true</alwaysOn>
+    <updateRate>100.0</updateRate>
+    <bodyName>base_link</bodyName>
+    <topicName>urchin_bot/pose</topicName>
+    <gaussianNoise>0.01</gaussianNoise>
+    <frameName>world</frameName>
+    <xyzOffsets>0 0 0</xyzOffsets>
+    <rpyOffsets>0 0 0</rpyOffsets>
+  </plugin>
+</gazebo>
+
+
+    <gazebo reference="base_link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks</material>
+    </gazebo>
+        <gazebo reference="111_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow</material>
+    </gazebo>
+        <gazebo reference="11_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+        <gazebo reference="1_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow </material>
+    </gazebo>
+        <gazebo reference="ft1_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+        <gazebo reference="222_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow </material>
+    </gazebo>
+        <gazebo reference="22_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+        <gazebo reference="2_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow </material>
+    </gazebo>
+        <gazebo reference="ft2_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+        <gazebo reference="333_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow </material>
+    </gazebo>
+        <gazebo reference="33_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+        <gazebo reference="3_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow </material>
+    </gazebo>
+        <gazebo reference="ft3_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+        <gazebo reference="444_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow </material>
+    </gazebo>
+        <gazebo reference="44_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+        <gazebo reference="4_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow </material>
+    </gazebo>
+        <gazebo reference="ft4_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+        <gazebo reference="555_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow </material>
+    </gazebo>
+        <gazebo reference="55_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+        <gazebo reference="5_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow </material>
+    </gazebo>
+        <gazebo reference="ft5_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+        <gazebo reference="666_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow </material>
+    </gazebo>
+        <gazebo reference="66_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+        <gazebo reference="6_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow </material>
+    </gazebo>
+        <gazebo reference="ft6_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+        <gazebo reference="777_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow </material>
+    </gazebo>
+        <gazebo reference="77_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+        <gazebo reference="7_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow </material>
+    </gazebo>
+        <gazebo reference="ft7_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+        <gazebo reference="888_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow </material>
+    </gazebo>
+        <gazebo reference="88_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+        <gazebo reference="8_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow </material>
+    </gazebo>
+        <gazebo reference="ft8_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+        <gazebo reference="999_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow </material>
+    </gazebo>
+        <gazebo reference="99_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+        <gazebo reference="9_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow </material>
+    </gazebo>
+        <gazebo reference="ft9_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+        <gazebo reference="101010_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow </material>
+    </gazebo>
+        <gazebo reference="1010_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+        <gazebo reference="10_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow </material>
+    </gazebo>
+        <gazebo reference="ft10_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+        <gazebo reference="111111_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow </material>
+    </gazebo>
+        <gazebo reference="1111_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+        <gazebo reference="11__Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow </material>
+    </gazebo>
+        <gazebo reference="ft11_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+        <gazebo reference="121212_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow </material>
+    </gazebo>
+        <gazebo reference="1212_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+        <gazebo reference="12_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow </material>
+    </gazebo>
+        <gazebo reference="ft12_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+        <gazebo reference="131313_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow </material>
+    </gazebo>
+        <gazebo reference="1313_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+        <gazebo reference="13_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow </material>
+    </gazebo>
+        <gazebo reference="ft13_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+        <gazebo reference="141414_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow </material>
+    </gazebo>
+        <gazebo reference="1414_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+        <gazebo reference="14_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/DarkYellow </material>
+    </gazebo>
+        <gazebo reference="ft14_Link">
+        <mu1>1.5</mu1>
+        <mu2>1.5</mu2>
+        <material>Gazebo/Bricks </material>
+    </gazebo>
+
+</robot>
