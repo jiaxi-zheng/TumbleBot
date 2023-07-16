@@ -1,5 +1,0 @@
-urchin_description
-/home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/TumbleBot/devel/.private/urchin_description/cmake.lock /home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/TumbleBot/devel/./cmake.lock
-/home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/TumbleBot/devel/.private/urchin_description/share/urchin_description/cmake/urchin_descriptionConfig.cmake /home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/TumbleBot/devel/share/urchin_description/cmake/urchin_descriptionConfig.cmake
-/home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/TumbleBot/devel/.private/urchin_description/share/urchin_description/cmake/urchin_descriptionConfig-version.cmake /home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/TumbleBot/devel/share/urchin_description/cmake/urchin_descriptionConfig-version.cmake
-/home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/TumbleBot/devel/.private/urchin_description/lib/pkgconfig/urchin_description.pc /home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/TumbleBot/devel/lib/pkgconfig/urchin_description.pc

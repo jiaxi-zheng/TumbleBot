@@ -1,6 +1,0 @@
-joystick
-/home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/test_ros/devel/.private/joystick/cmake.lock /home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/test_ros/devel/./cmake.lock
-/home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/test_ros/devel/.private/joystick/share/joystick/cmake/joystickConfig.cmake /home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/test_ros/devel/share/joystick/cmake/joystickConfig.cmake
-/home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/test_ros/devel/.private/joystick/share/joystick/cmake/joystickConfig-version.cmake /home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/test_ros/devel/share/joystick/cmake/joystickConfig-version.cmake
-/home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/test_ros/devel/.private/joystick/lib/joystick/XBOXController /home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/test_ros/devel/lib/joystick/XBOXController
-/home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/test_ros/devel/.private/joystick/lib/pkgconfig/joystick.pc /home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/test_ros/devel/lib/pkgconfig/joystick.pc

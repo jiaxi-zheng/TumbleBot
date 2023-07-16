@@ -1,7 +1,0 @@
-urchin_control
-/home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/TumbleBot/devel/.private/urchin_control/cmake.lock /home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/TumbleBot/devel/./cmake.lock
-/home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/TumbleBot/devel/.private/urchin_control/share/urchin_control/cmake/urchin_controlConfig.cmake /home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/TumbleBot/devel/share/urchin_control/cmake/urchin_controlConfig.cmake
-/home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/TumbleBot/devel/.private/urchin_control/share/urchin_control/cmake/urchin_controlConfig-version.cmake /home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/TumbleBot/devel/share/urchin_control/cmake/urchin_controlConfig-version.cmake
-/home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/TumbleBot/devel/.private/urchin_control/lib/pkgconfig/urchin_control.pc /home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/TumbleBot/devel/lib/pkgconfig/urchin_control.pc
-/home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/TumbleBot/devel/.private/urchin_control/lib/urchin_control/tele_pub /home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/TumbleBot/devel/lib/urchin_control/tele_pub
-/home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/TumbleBot/devel/.private/urchin_control/lib/urchin_control/Fixed_motion /home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/TumbleBot/devel/lib/urchin_control/Fixed_motion

@@ -1,5 +1,0 @@
-urchin_bot
-/home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/test_ros/devel/.private/urchin_bot/cmake.lock /home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/test_ros/devel/./cmake.lock
-/home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/test_ros/devel/.private/urchin_bot/share/urchin_bot/cmake/urchin_botConfig.cmake /home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/test_ros/devel/share/urchin_bot/cmake/urchin_botConfig.cmake
-/home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/test_ros/devel/.private/urchin_bot/share/urchin_bot/cmake/urchin_botConfig-version.cmake /home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/test_ros/devel/share/urchin_bot/cmake/urchin_botConfig-version.cmake
-/home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/test_ros/devel/.private/urchin_bot/lib/pkgconfig/urchin_bot.pc /home/jiaxi/Projects/Urchin/urchin_Ral_with_iros/test_ros/devel/lib/pkgconfig/urchin_bot.pc
